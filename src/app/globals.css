@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .text-gradient {
+    background-image: linear-gradient(to bottom, black, #001E7F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  .mask-gradient-horizontal {
+    mask-image: linear-gradient(to bottom, transparent, black, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black, transparent);
+  }
+
+  .mask-gradient-vertical {
+    mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+  }
+
+  .section-title {
+    @apply text-center font-bold text-[30px] md:text-[54px] md:leading-[60px] leading-[30px] tracking-tighter;
+  }
+  .section-desc {
+    @apply text-center text-[#010D3E] text-[22px] tracking-tight ;
+  }
+  .webkit {
+    -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+  }
+}
+@layer components {
+  .btn {
+    @apply  px-4 py-2 rounded-lg font-medium tracking-tight flex justify-center items-center;
+  }
+  .btn-primary {
+    @apply bg-black text-white;
+  }
+  .btn-text {
+    @apply text-black bg-transparent;
+  }
+  .logo-ticker-image {
+    @apply h-8 w-full;
+  }
+  .tag {
+    @apply px-3 py-1 border border-[#222222]/10 rounded-lg font-medium text-sm inline-flex tracking-tight;
+  }
+}
