@@ -26,7 +26,7 @@ export const Footer = () => {
           <Pins />
           <Youtube />
         </div>
-        <p className="mt-6">&copy; 2024 Your Company, Inc. All rights reserved M's.</p>
+        <p className="mt-6">&copy; 2024 Your Company, Inc. All rights reserved M&apos;s.</p>
       </div>
     </footer>
   );
